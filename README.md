@@ -13,15 +13,16 @@
 
 ```
 <?php
-define( 'WP_HOME',           'https://www.example.com' );
-define( 'WP_SITEURL',        WP_HOME . '/cms' );
-define( 'WP_CONTENT_DIR',    dirname( __FILE__ ) );
-define( 'WP_CONTENT_URL',    WP_HOME );
-define( 'WP_PLUGIN_DIR',     WP_CONTENT_DIR . '/extensions' );
-define( 'WP_PLUGIN_URL',     WP_CONTENT_URL . '/extensions' );
-define( 'PLUGINDIR',         'extensions' );
-define( 'WPMU_PLUGIN_DIR',   WP_PLUGIN_DIR . '/extensions_mu' );
-define( 'WPMU_PLUGIN_URL',   WP_PLUGIN_URL . '/extensions_mu' );
-define( 'MUPLUGINDIR',       PLUGINDIR . '/extensions_mu' );
-define( 'UPLOADS',           'medias' );
+define( 'WP_HOME',         'https://www.example.com' );
+define( 'WP_SITEURL',      WP_HOME . '/cms' );
+define( 'WP_CONTENT_DIR',  dirname( __FILE__ ) );
+define( 'WP_CONTENT_URL',  WP_HOME );
+define( 'WP_PLUGIN_DIR',   WP_CONTENT_DIR . '/extensions' );
+define( 'WP_PLUGIN_URL',   WP_CONTENT_URL . '/extensions' );
+define( 'PLUGINDIR',       'extensions' );
+define( 'WPMU_PLUGIN_DIR', WP_PLUGIN_DIR . '/extensions_mu' );
+define( 'WPMU_PLUGIN_URL', WP_PLUGIN_URL . '/extensions_mu' );
+define( 'MUPLUGINDIR',     PLUGINDIR . '/extensions_mu' );
+define( 'UPLOADS',         'medias' );
+
 ```
