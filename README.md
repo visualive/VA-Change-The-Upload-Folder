@@ -11,7 +11,7 @@
 
 ## Sample wp-config.php
 
-```
+```PHP
 <?php
 define( 'WP_HOME',         'https://www.example.com' );
 define( 'WP_SITEURL',      WP_HOME . '/cms' );
