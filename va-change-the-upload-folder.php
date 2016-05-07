@@ -6,13 +6,13 @@
  * Author: KUCKLU
  * Version: 1.0.0
  * Author URI: https://www.visualive.jp/
- * Text Domain: va-store-functions
+ * Text Domain: va-change-the-upload-folder
  * Domain Path: /langs
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package    WordPress
- * @subpackage VA Store Functions
+ * @subpackage VA Change The Update folder
  * @author     KUCKLU <kuck1u@visualive.jp>
  *             Copyright (C) 2016 KUCKLU & VisuAlive.
  *             This program is free software; you can redistribute it and/or modify
