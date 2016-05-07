@@ -9,7 +9,7 @@
 
 各定数については、Codex をご覧ください。
 
-## Sample wp-config.php
+## wp-config.php の記述例
 
 ```PHP
 <?php
