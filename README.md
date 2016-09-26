@@ -1,4 +1,4 @@
-# VA Change The Upload Directory
+# VA Change The Upload Path
 
 ## インストール
 
