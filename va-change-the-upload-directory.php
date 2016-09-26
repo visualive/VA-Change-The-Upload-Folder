@@ -34,11 +34,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( defined( 'UPLOADS' ) && ! ( is_multisite() && get_site_option( 'ms_files_rewriting' ) ) ) {
-    add_filter( 'upload_dir', function ( $paths ) {
-        $paths['path'] = $paths['basedir'] = WP_CONTENT_DIR . '/' . UPLOADS;
-        $paths['url']  = $paths['baseurl'] = WP_CONTENT_URL . '/' . UPLOADS;
+add_filter( 'upload_dir', function ( $path ) {
+	/**
+	 * Honor the value of UPLOADS. This happens as long as ms-files rewriting is disabled.
+	 * We also sometimes obey UPLOADS when rewriting is enabled -- see the next block.
+	 */
+	if ( defined( 'UPLOADS' ) && ! ( is_multisite() && get_site_option( 'ms_files_rewriting' ) ) ) {
+		$upload_path     = get_option( 'upload_path', '' );
+		$upload_url_path = get_option( 'upload_url_path', '' );
 
-        return $paths;
-    } );
-}
+		if ( '' === $upload_path && '' === $upload_url_path ) {
+			$upload_path     = trailingslashit( untrailingslashit( WP_CONTENT_DIR ) ) . untrailingslashit( UPLOADS );
+			$upload_url_path = trailingslashit( untrailingslashit( WP_CONTENT_URL ) ) . untrailingslashit( UPLOADS );
+			$path['basedir'] = $upload_path;
+			$path['baseurl'] = $upload_url_path;
+
+			if ( get_option( 'uploads_use_yearmonth_folders' ) ) {
+				$path['path'] = $upload_path . $path['subdir'];
+				$path['url']  = $upload_url_path . $path['subdir'];
+			}
+
+			update_option( 'upload_path', $upload_path );
+			update_option( 'upload_url_path', $upload_url_path );
+		}
+	}
+
+	return $path;
+} );
