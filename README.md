@@ -19,10 +19,9 @@ define( 'WP_CONTENT_DIR',  dirname( __FILE__ ) );
 define( 'WP_CONTENT_URL',  WP_HOME );
 define( 'WP_PLUGIN_DIR',   WP_CONTENT_DIR . '/extensions' );
 define( 'WP_PLUGIN_URL',   WP_CONTENT_URL . '/extensions' );
-define( 'PLUGINDIR',       'extensions' );
+define( 'PLUGINDIR',       WP_PLUGIN_DIR );
 define( 'WPMU_PLUGIN_DIR', WP_PLUGIN_DIR . '/extensions_mu' );
 define( 'WPMU_PLUGIN_URL', WP_PLUGIN_URL . '/extensions_mu' );
-define( 'MUPLUGINDIR',     PLUGINDIR . '/extensions_mu' );
+define( 'MUPLUGINDIR',     WPMU_PLUGIN_DIR );
 define( 'UPLOADS',         'medias' );
-
 ```
