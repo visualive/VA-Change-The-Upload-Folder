@@ -1,18 +1,18 @@
 <?php
 /**
- * Plugin Name: VA Change The Update Directory
+ * Plugin Name: VA Change The Upload Path
  * Plugin URI: https://www.visualive.jp/
  * Description: .
  * Author: KUCKLU
  * Version: 1.0.0
  * Author URI: https://www.visualive.jp/
- * Text Domain: va-change-the-upload-directory
+ * Text Domain: va-change-the-upload-path
  * Domain Path: /langs
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package    WordPress
- * @subpackage VA Change The Update Directory
+ * @subpackage VA Change The Upload Path
  * @author     KUCKLU <kuck1u@visualive.jp>
  *             Copyright (C) 2016 KUCKLU & VisuAlive.
  *             This program is free software; you can redistribute it and/or modify
